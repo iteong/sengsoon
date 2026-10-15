@@ -75,23 +75,29 @@
 - Costa Del Sol (Earlier project): Electrical works for the condominium. Client: —.
 
 ## Frequently asked questions
-**Is Seng Soon a registered electrical contractor?**
-Yes. We are registered with the Building and Construction Authority under workhead ME05 (Electrical Engineering) at grade L1, certified bizSAFE Star and ISO 9001:2015, and have been an SMRT registered contractor since 1998.
-
 **Can you renew our EMA electrical installation licence?**
 Yes. Our in-house Licensed Electrical Worker can act as the LEW for your installation, handle the application or annual renewal, and carry out the required inspection and testing. Non-domestic installations above 45 kVA need this licence, and renewals should be filed at least a month before expiry.
+
+**How often must our electrical installation be inspected?**
+It depends on the premises. EMA requires condominiums and multi-tenanted buildings to be inspected at least once every six months, construction sites at least once a month, and most other licensed installations at least once a year. As your appointed LEW, we schedule and carry out these inspections for you.
+
+**How long is the power off when you replace a main switchboard?**
+Usually one night or one day, depending on the property. Residential shutdowns are scheduled on weekdays, and commercial buildings are usually done over a weekend. We can arrange a temporary generator if you need power kept on during the changeover.
+
+**Do you handle breakdowns and emergency call-outs?**
+Yes, for clients on a servicing contract, during office hours (Monday to Friday, 10am to 6pm).
+
+**Can you install EV chargers in our condo?**
+Yes. Once you have bought your chargers, we install them, from cabling to connection, and our in-house Licensed Electrical Worker tests and certifies the installation. We do not supply the chargers ourselves.
+
+**Is Seng Soon a registered electrical contractor?**
+Yes. We are registered with the Building and Construction Authority under workhead ME05 (Electrical Engineering) at grade L1, certified bizSAFE Star and ISO 9001:2015, and have been an SMRT registered contractor since 1998.
 
 **Do you work directly with MCSTs?**
 Yes. We contract directly with management corporations for switchboard upgrades and other common-area works, and we have held servicing contracts with some MCSTs for more than ten years.
 
 **What size of project do you take on?**
-We take on everything from repairs, servicing and licence renewals to multi-million-dollar installations. Our largest single contract was $6 million, and we partner with other contractors on the largest developments. Every site is led by one of our own supervisors.
-
-**Do you work as a subcontractor to main contractors?**
-Most of our new-build work is as the electrical subcontractor to a main contractor or M&E firm, on residential, healthcare, education and commercial projects.
-
-**Where are you located?**
-Our office is at Block 3006 Ubi Road 1, #02-358, Kampong Ubi Industrial Estate, Singapore 408700. We work on sites across Singapore, including underground rail sites.
+We take on everything from repairs, servicing and licence renewals to multi-million-dollar installations, anywhere in Singapore. Our largest single contract was $6 million. Most of our new-build work is as the electrical subcontractor to a main contractor or M&E firm, and we partner with other contractors on the largest developments. Every site is led by one of our own supervisors.
 
 
 ## Careers
