@@ -2,7 +2,7 @@
 
 Company website for **Seng Soon Electrical Engineering Pte Ltd** (成順電器工程私人有限公司), a licensed electrical contractor in Singapore since 1971.
 
-Live site: https://www.sengsoon.com.sg/
+Live site: https://www.sengsoon.com.sg/ (until the DNS switch below is done, the site is only at https://sengsoon.vercel.app/)
 
 It's a static, single-page site with no framework and no build step. The site is aimed at two audiences: **clients** (main contractors, M&E firms, MCSTs, rail and building owners) and **job seekers**.
 
@@ -37,6 +37,20 @@ Only `public/` is served, so files at the repository root (like this README) don
 4. Settings › Domains: add `www.sengsoon.com.sg` as the primary domain, and `sengsoon.com.sg` redirecting to www.
 5. Set the DNS records Vercel shows: the A record for `@` and the CNAME for `www`. **Only change these two.** Leave MX, SPF, DKIM and the other email records alone, or company email will stop working.
 
+Steps 1 to 4 are done. Step 5 has been requested from the DNS manager. The records are:
+
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `216.198.79.1` |
+| CNAME | `www` | `610f04facff5b299.vercel-dns-017.com` |
+
+Once they are live, both domains show **Valid Configuration** under Vercel › Settings › Domains.
+
+### Domain and email
+- **DNS** is managed by Techclique (name servers `ns1/ns2.techclique.com.sg`), who also run company email. Ask them for DNS changes.
+- **Email** runs on the old server: the `mail` A record (`103.7.8.33`), the MX record and the SPF record all point there. Never change or remove them.
+- **Renewal:** the `.com.sg` domain is registered through GoCloudEasy and renews on **30 November**. Check it has been renewed before that date, or the website and company email will both stop working.
+
 After launch:
 - **Google Search Console:** verify the domain and submit `https://www.sengsoon.com.sg/sitemap.xml`
 - **Bing Webmaster Tools:** import from Search Console
@@ -46,7 +60,7 @@ After launch:
 
 ## Page sections
 
-Header, then: hero (animated project map), credentials, key figures, who we serve, services (single-line diagram), projects (photo cards plus a filterable list), about, careers, common questions, contact, closing banner.
+Header (the menu collapses to a ☰ button below 900px wide), then: hero (animated project map), credentials, key figures, who we serve, services (single-line diagram), projects (photo cards plus a filterable list), about, careers, common questions, contact, closing banner.
 
 ## Design
 
@@ -57,7 +71,7 @@ Header, then: hero (animated project map), credentials, key figures, who we serv
 | Layout | Light and dark mode supported; works from 320px phones to wide desktops |
 
 **Animations** (all pause when off screen, replay when scrolled back into view, and are disabled for visitors with "reduce motion" turned on):
-- **Hero map:** the island is drawn as dots, and project lights switch on in date order. Live projects pulse, and landmark projects are labelled.
+- **Hero map:** the island is drawn as dots, and project lights switch on in date order. Live projects pulse, and landmark projects are labelled. Hovering a light (or tapping it on a phone) shows the project.
 - **Headings:** they rise in word by word.
 - **Key figures:** they count up from zero.
 - **Services:** the busbar energises, the circuits light in turn, then a current pulse loops.
@@ -103,6 +117,9 @@ The on-page counts ("Show all N projects", "Showing N recent and notable project
 ### FAQ
 If you edit a question or answer, also update the `FAQPage` structured data and the FAQ section of `llms.txt`.
 
+### Credentials
+BCA registration, the LEW, bizSAFE, ISO certificates and SMRT appear in the credentials strip, the "Is Seng Soon a registered electrical contractor?" FAQ answer, the `hasCredential` structured data and `llms.txt`. Update all four. Only use official logo files supplied by each certifying body, and only while the certificate is valid.
+
 ### Phone, email, address, hours
 These appear in the contact section, the structured data, `llms.txt`, `og-image.png` and the Google Business Profile. Keep them all identical.
 
@@ -110,13 +127,14 @@ These appear in the contact section, the structured data, `llms.txt`, `og-image.
 - Export WebP (about 960px wide, quality around 70) and a JPG fallback (about 800px).
 - Use a **new file name** for every new or changed image (for example `name.<hash>-960.webp`). Images are cached for a year, so a reused name won't refresh.
 - Always include `width`, `height` and descriptive `alt` text.
+- The careers photo (`mentor.*`) is AI-generated, so its alt text describes the scene without calling the people Seng Soon staff. Replacing it with a real photo of the team would be better.
 
 ### Domain
 If the site moves to a different address, search and replace `https://www.sengsoon.com.sg/` in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt`.
 
 ### Before each publish
 - Check on a phone that nothing scrolls sideways.
-- Run Google's [Rich Results Test](https://search.google.com/test/rich-results) on the live page to check the structured data.
+- Check the structured data on the live page with the [Schema Markup Validator](https://validator.schema.org/) (no sign-in needed), or Google's [Rich Results Test](https://search.google.com/test/rich-results) while signed in to a Google account.
 
 ---
 
