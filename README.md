@@ -37,24 +37,30 @@ Only `public/` is served, so files at the repository root (like this README) don
 4. Settings › Domains: add `www.sengsoon.com.sg` as the primary domain, and `sengsoon.com.sg` redirecting to www.
 5. Set the DNS records Vercel shows: the A record for `@` and the CNAME for `www`. **Only change these two.** Leave MX, SPF, DKIM and the other email records alone, or company email will stop working.
 
-Steps 1 to 4 are done. Step 5 has been requested from the DNS manager. The records are:
+All five steps are done. The site has been live on `www.sengsoon.com.sg` since 16 Oct 2026. The records are:
 
 | Type | Name | Value |
 |---|---|---|
 | A | `@` | `216.198.79.1` |
 | CNAME | `www` | `610f04facff5b299.vercel-dns-017.com` |
 
-Once they are live, both domains show **Valid Configuration** under Vercel › Settings › Domains.
+Both domains show **Valid Configuration** under Vercel › Settings › Domains.
 
 ### Domain and email
 - **DNS** is managed by Techclique (name servers `ns1/ns2.techclique.com.sg`), who also run company email. Ask them for DNS changes.
 - **Email** runs on the old server: the `mail` A record (`103.7.8.33`), the MX record and the SPF record all point there. Never change or remove them.
-- **Renewal:** the `.com.sg` domain is registered through GoCloudEasy and renews on **30 November**. Check it has been renewed before that date, or the website and company email will both stop working.
+- **Google verification:** a TXT record on `@` starting `google-site-verification=` proves ownership to Google Search Console. It sits alongside the SPF TXT record. Never remove it, or access to Search Console is lost.
+- **Renewal:** the `.com.sg` domain is registered through GoCloudEasy and renews on **30 November**. Check it has been renewed before that date, or the website and company email will both stop working. Check with `whois sengsoon.com.sg`.
+- **Registrant:** still Techclique Pte Ltd. A transfer to Seng Soon Electrical Engineering Pte Ltd (Techclique staying as technical contact) was requested on 15 Oct 2026.
 
 After launch:
-- **Google Search Console:** verify the domain and submit `https://www.sengsoon.com.sg/sitemap.xml`
-- **Bing Webmaster Tools:** import from Search Console
-- **Google Business Profile:** keep the name, address, phone and hours identical to the site
+- [x] **Google Search Console:** Domain property `sengsoon.com.sg`, verified by DNS. Sitemap `https://www.sengsoon.com.sg/sitemap.xml` submitted and homepage indexing requested.
+- [x] **Bing Webmaster Tools:** imported from Search Console, with the sitemap submitted separately (the import didn't bring it across) and homepage indexing requested.
+- [ ] **Google Business Profile:** keep the name, address, phone and hours identical to the site.
+
+### Analytics
+- **Amplitude** (project `sengsoon`): analytics with autocapture and Session Replay, loaded from jsDelivr in the `<head>` of `index.html`. It only starts on `www.sengsoon.com.sg`, `sengsoon.com.sg`, `sengsoon.vercel.app` and `localhost`, so Vercel's screenshot bot on per-deployment URLs isn't counted. The API key in the page is public by design; never put a secret key there.
+- **Vercel Web Analytics:** visitor and page-view counts, served from the site's own domain so ad blockers rarely block it. Enabled under Vercel › Analytics.
 
 ---
 
