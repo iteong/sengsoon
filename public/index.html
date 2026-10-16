@@ -32,7 +32,11 @@
 <script type="module">
   // Amplitude ingestion key — public by design; move to an env var when you set up environments.
   import * as amplitude from 'https://cdn.jsdelivr.net/npm/@amplitude/unified@1/+esm';
-  amplitude.initAll('b71f49ff26d5cca6ad37331ef10f4973', {"analytics":{"autocapture":true},"sessionReplay":{"sampleRate":1}});</script>
+  // Skip Vercel's per-deployment URLs, which its headless screenshot bot loads on every deploy
+  if (['www.sengsoon.com.sg', 'sengsoon.com.sg', 'sengsoon.vercel.app', 'localhost', '127.0.0.1'].includes(location.hostname)) {
+    amplitude.initAll('b71f49ff26d5cca6ad37331ef10f4973', {"analytics":{"autocapture":true},"sessionReplay":{"sampleRate":1}});
+  }
+</script>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
