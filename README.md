@@ -2,7 +2,7 @@
 
 Company website for **Seng Soon Electrical Engineering Pte Ltd** (成順電器工程私人有限公司), a licensed electrical contractor in Singapore since 1971.
 
-Live site: https://www.sengsoon.com.sg/ (until the DNS switch below is done, the site is only at https://sengsoon.vercel.app/)
+Live site: https://www.sengsoon.com.sg/ (also at https://sengsoon.vercel.app/)
 
 It's a static, single-page site with no framework and no build step. The site is aimed at two audiences: **clients** (main contractors, M&E firms, MCSTs, rail and building owners) and **job seekers**.
 
@@ -37,7 +37,7 @@ Only `public/` is served, so files at the repository root (like this README) don
 4. Settings › Domains: add `www.sengsoon.com.sg` as the primary domain, and `sengsoon.com.sg` redirecting to www.
 5. Set the DNS records Vercel shows: the A record for `@` and the CNAME for `www`. **Only change these two.** Leave MX, SPF, DKIM and the other email records alone, or company email will stop working.
 
-All five steps are done. The site has been live on `www.sengsoon.com.sg` since 16 Oct 2026. The records are:
+All five steps are done. Techclique switched the DNS on 16 Oct 2026, and the site has been live on `www.sengsoon.com.sg` since then. The records are:
 
 | Type | Name | Value |
 |---|---|---|
@@ -47,16 +47,16 @@ All five steps are done. The site has been live on `www.sengsoon.com.sg` since 1
 Both domains show **Valid Configuration** under Vercel › Settings › Domains.
 
 ### Domain and email
-- **DNS** is managed by Techclique (name servers `ns1/ns2.techclique.com.sg`), who also run company email. Ask them for DNS changes.
+- **DNS** is hosted by Techclique (Vincent Chan, vincentchan@techclique.com.sg), who also run company email. Ask them for DNS changes. The registry delegates to `ns811/ns812.sgcloudhosting.com`, the same server as `ns1/ns2.techclique.com.sg`.
 - **Email** runs on the old server: the `mail` A record (`103.7.8.33`), the MX record and the SPF record all point there. Never change or remove them.
 - **Google verification:** a TXT record on `@` starting `google-site-verification=` proves ownership to Google Search Console. It sits alongside the SPF TXT record. Never remove it, or access to Search Console is lost.
-- **Renewal:** the `.com.sg` domain is registered through GoCloudEasy and renews on **30 November**. Check it has been renewed before that date, or the website and company email will both stop working. Check with `whois sengsoon.com.sg`.
-- **Registrant:** still Techclique Pte Ltd. A transfer to Seng Soon Electrical Engineering Pte Ltd (Techclique staying as technical contact) was requested on 15 Oct 2026.
+- **Renewal:** the `.com.sg` domain is registered through GoCloudEasy, with Techclique managing renewals for S$60 a year. It expires on **30 November** each year; if it lapses, the website and company email both stop working. Techclique renewed it on 16 Oct 2026 for 30 Nov 2026 to 29 Nov 2027 (invoice TCINV01210). As of 18 Oct 2026, `whois sengsoon.com.sg` still shows the old expiry date (2026-11-30). Check that it shows 2027-11-30 before 30 Nov 2026.
+- **Registrant:** Seng Soon Electrical Engineering Pte Ltd, which is also the administrative contact (admin@sengsoon.com.sg). The registrant was transferred from Techclique Pte Ltd on 16 Oct 2026, and the details were verified on SGNIC's [VerifiedID@SG](https://verifiedid.sgnic.sg/) through Singpass the same day. GoCloudEasy is the technical contact.
 
 After launch:
 - [x] **Google Search Console:** Domain property `sengsoon.com.sg`, verified by DNS. Sitemap `https://www.sengsoon.com.sg/sitemap.xml` submitted and homepage indexing requested.
 - [x] **Bing Webmaster Tools:** imported from Search Console, with the sitemap submitted separately (the import didn't bring it across) and homepage indexing requested.
-- [ ] **Google Business Profile:** keep the name, address, phone and hours identical to the site.
+- [ ] **Google Business Profile:** keep the name, address, phone and hours identical to the site. The site links to the existing Maps listing, but the listing's website field still points to bca.gov.sg and it has no opening hours. Whoever owns the listing needs to fix both.
 
 ### Analytics
 - **Amplitude** (project `sengsoon`): analytics with autocapture and Session Replay, loaded from jsDelivr in the `<head>` of `index.html`. It only starts on `www.sengsoon.com.sg`, `sengsoon.com.sg`, `sengsoon.vercel.app` and `localhost`, so Vercel's screenshot bot on per-deployment URLs isn't counted. The API key in the page is public by design; never put a secret key there.
