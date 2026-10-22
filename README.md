@@ -4,7 +4,7 @@ Company website for **Seng Soon Electrical Engineering Pte Ltd** (成順電器�
 
 Live site: https://www.sengsoon.com.sg/ (also at https://sengsoon.vercel.app/)
 
-It's a static, single-page site with no framework and no build step. The site is aimed at two audiences: **clients** (main contractors, M&E firms, MCSTs, rail and building owners) and **job seekers**.
+It's a static, single-page site with no framework and no build step. The site is aimed at **clients**: main contractors, M&E firms, MCSTs, rail and building owners. The careers section and the Assistant Engineer job card were removed in October 2026 because the company isn't hiring for now; they're in git history (the commit before "Remove the careers section") if hiring resumes.
 
 ---
 
@@ -66,7 +66,7 @@ After launch:
 
 ## Page sections
 
-Header (the menu collapses to a ☰ button below 900px wide), then: hero (animated project map), credentials, key figures, who we serve, services (single-line diagram), projects (photo cards plus a filterable list), about, careers, common questions, contact, closing banner.
+Header (the menu collapses to a ☰ button below 900px wide), then: hero (animated project map), credentials, key figures, who we serve, services (single-line diagram), projects (photo cards plus a filterable list), about, common questions, contact, closing banner.
 
 ## Design
 
@@ -133,7 +133,6 @@ These appear in the contact section, the structured data, `llms.txt`, `og-image.
 - Export WebP (about 960px wide, quality around 70) and a JPG fallback (about 800px).
 - Use a **new file name** for every new or changed image (for example `name.<hash>-960.webp`). Images are cached for a year, so a reused name won't refresh.
 - Always include `width`, `height` and descriptive `alt` text.
-- The careers photo (`mentor.*`) is AI-generated, so its alt text describes the scene without calling the people Seng Soon staff. Replacing it with a real photo of the team would be better.
 
 ### Domain
 If the site moves to a different address, search and replace `https://www.sengsoon.com.sg/` in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt`.
