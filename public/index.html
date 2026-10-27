@@ -99,7 +99,7 @@
 
   <div class="facts" aria-label="Seng Soon in numbers">
     <div class="wrap">
-      <div class="fact"><b><span class="num" data-count="53">53</span></b><span>years in electrical contracting, since 1973</span></div>
+      <div class="fact"><b><span class="num" id="years" data-count="53">53</span></b><span>years in electrical contracting, since 1973</span></div>
       <div class="fact"><b><span class="num" data-count="200">200</span><i>+</i></b><span>development projects since 1973</span></div>
       <div class="fact"><b><span class="num" data-count="300">300</span><i>+</i></b><span>clients, including small works and servicing</span></div>
       <div class="fact"><b><span class="num" data-count="3">3</span></b><span>SMRT rail lines under our lightning protection maintenance</span></div>
@@ -445,6 +445,9 @@
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var yEl = document.getElementById('yr'); if (yEl) yEl.textContent = new Date().getFullYear();
+  /* Full years since the business commenced on 24 Jul 1973 (ACRA); the HTML holds a fallback for crawlers */
+  var now = new Date(), yrs = now.getFullYear() - 1973 - (now < new Date(now.getFullYear(), 6, 24) ? 1 : 0);
+  var ysEl = document.getElementById('years'); if (ysEl) { ysEl.setAttribute('data-count', yrs); ysEl.textContent = yrs; }
 
   /* Mobile menu */
   var top = document.querySelector('.top'), menuBtn = top.querySelector('.menu-btn');
