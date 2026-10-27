@@ -1,6 +1,6 @@
 # Seng Soon Electrical Engineering: website
 
-Company website for **Seng Soon Electrical Engineering Pte Ltd** (成順電器工程私人有限公司), a licensed electrical contractor in Singapore since 1971.
+Company website for **Seng Soon Electrical Engineering Pte Ltd** (成順電器工程私人有限公司), a licensed electrical contractor in Singapore since 1973.
 
 Live site: https://www.sengsoon.com.sg/ (also at https://sengsoon.vercel.app/)
 
