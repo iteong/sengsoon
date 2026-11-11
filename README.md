@@ -66,7 +66,7 @@ After launch:
 
 ## Page sections
 
-Header (the menu collapses to a ☰ button below 900px wide), then: hero (animated project map), credentials, key figures, who we serve, services (single-line diagram), projects (photo cards plus a filterable list), about, common questions, contact, closing banner.
+Header (the menu collapses to a ☰ button below 900px wide), then: hero (animated project map), credentials, who we serve (with the key figures between its intro and the client groups), services (single-line diagram), projects (photo cards plus a filterable list), about, common questions, contact, closing banner.
 
 ## Design
 
@@ -142,14 +142,15 @@ Both ISO certificates cover "Provision of Electrical Engineering Service and Ins
 
 - **All three expire on 29 April 2029.** Before then, get the renewed certificates and update:
   - the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`)
-  - the certificate-number line under the strip
-  - the "valid to" dates, the "since" years and the certificate numbers in the strip, the FAQ answer, the structured data and `llms.txt`
+  - the certificate-number captions in the strip
+  - the "since" years and the certificate numbers in the strip, the FAQ answer, the structured data and `llms.txt`
+
+  The site deliberately doesn't show expiry dates or offer certificate copies; this table is the record of when they expire.
 
   The KW logos print the cert numbers inside them, so replace the logos too if the numbers change.
 - Don't use the SAC mark on its own (the "QS-2017-31 / OSH-2019-20" file). It may only appear combined with KW Certification's mark, as in the ISO logo files.
 - Don't recolour or invert the logos. In dark mode they sit on white tiles instead.
 - BCA, EMA and SMRT don't give contractors a logo to display, and using their corporate logos would imply endorsement. Their columns use big type headings instead (**L1**, **LEW**, **1998**). Don't swap those for logos.
-- The site says certificate copies are available on request. Keep that only while someone at the office will send them.
 - The in-house LEW holds an **Electrical Technician's licence** (design up to 150 kVA, operation up to 500 kVA, per EMA's Electrical Installation Licence handbook). Larger installations go to a partner Professional Engineer. Keep the strip, the "Licensed sign-off in-house" point, the EMA licensing service and the licence-renewal FAQ consistent with that, and never claim he signs off every installation.
 
 **Credentials strip layout.** It sits at the bottom of the hero, with a light background in light mode. It has six columns, and each one is a `<div>` with a `<dt>` heading and a `<dd>` description:
@@ -158,10 +159,10 @@ Both ISO certificates cover "Provision of Electrical Engineering Service and Ins
 <!-- type heading -->
 <div><dt><span class="tb"><b>L1</b><small>BCA · ME05</small></span></dt><dd>Description</dd></div>
 <!-- logo heading -->
-<div><dt class="lg"><img src="img/iso9001.5cd591cb-400.png" alt="…" width="400" height="176" decoding="async" loading="lazy"></dt><dd>Description</dd></div>
+<div><dt class="lg"><img src="img/iso9001.5cd591cb-400.png" alt="…" width="400" height="176" decoding="async" loading="lazy"><small>No. KWQ-1547</small></dt><dd>Description</dd></div>
 ```
 
-Keep each description to about three lines at desktop width so the columns end level. The certificate numbers go in the `cred-nums` line below the grid, not in the descriptions.
+Every heading has a small red caption: what the type heading stands for, the LEW licence number, or the certificate number under each logo. Keep each description to about three lines at desktop width so the columns end level.
 
 ### Phone, email, address, hours
 These appear in the contact section, the structured data, `llms.txt`, `og-image.png` and the Google Business Profile. Keep them all identical.
