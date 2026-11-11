@@ -75,6 +75,7 @@ Header (the menu collapses to a ☰ button below 900px wide), then: hero (animat
 | Colours | Night navy `#0A0E2C`, Seng Soon red `#E1251B` / `#FF4433`, paper `#F3F2EE` |
 | Type | Archivo (Google Fonts) for everything; Noto Serif TC for 成順電器 |
 | Layout | Light and dark mode supported; works from 320px phones to wide desktops |
+| Credentials strip | Light background so the certification logos show in their original colours; navy in dark mode, with the logos on white tiles |
 
 **Animations** (all pause when off screen, replay when scrolled back into view, and are disabled for visitors with "reduce motion" turned on):
 - **Hero map:** the island is drawn as dots, and project lights switch on in date order. Live projects pulse, and landmark projects are labelled. Hovering a light (or tapping it on a phone) shows the project.
@@ -85,8 +86,8 @@ Header (the menu collapses to a ☰ button below 900px wide), then: hero (animat
 
 ## Performance and search
 
-- **Images:** WebP with a JPG fallback, in two sizes, lazy loaded. File names include a content hash, so they can be cached for a year.
-- **First load on a phone:** about 118 KB, with content visible in under half a second and no layout shift.
+- **Images:** WebP with a JPG fallback, in two sizes, lazy loaded. The certification logos are the exception: PNG only. File names include a content hash, so they can be cached for a year.
+- **First load on a phone:** about 118 KB, with content visible in under half a second and no layout shift. The certification logos (about 155 KB) are lazy loaded, so on a phone they only load as the visitor scrolls to the credentials strip.
 - **Structured data** (schema.org JSON-LD) in `index.html`: Organization/Electrician (contact, address, hours, credentials, services), FAQPage, and an ItemList of projects.
 - **Works without JavaScript.** All content, including the full project list, is in the HTML.
 
@@ -126,10 +127,38 @@ If you edit a question or answer, also update the `FAQPage` structured data and 
 ### Credentials
 BCA registration, the LEW, bizSAFE, ISO certificates and SMRT appear in the credentials strip, the "Is Seng Soon a registered electrical contractor?" FAQ answer, the `hasCredential` structured data and `llms.txt`. Update all four. Only use official logo files supplied by each certifying body, and only while the certificate is valid.
 
-- **bizSAFE Star (E01694), ISO 9001 (KWQ-1547) and ISO 45001 (KWO-1548) all expire on 29 April 2029.** Before then, get the renewed certificates and replace the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`), the certificate-number line under the strip, and the "valid to" dates. The KW logos print the cert numbers inside them, so they must be replaced if the numbers change.
+**Current certificates** (the PDFs and the logo files supplied by the certifiers are kept outside this repo, in the company's "Certs and Logos" folder):
+
+| Certificate | Number | Issued by | Held since | Current issue | Valid until |
+|---|---|---|---|---|---|
+| bizSAFE Star | E01694 | Workplace Safety and Health Council | — | 30 Apr 2026 | 29 Apr 2029 |
+| ISO 9001:2015 (quality) | KWQ-1547 | KW Certification Pte Ltd, SAC accredited (QS-2017-31) | 30 Apr 2014 | 26 Apr 2026 | 29 Apr 2029 |
+| ISO 45001:2018 (health and safety) | KWO-1548 | KW Certification Pte Ltd, SAC accredited (OSH-2019-20) | 12 Jun 2015 | 26 Apr 2026 | 29 Apr 2029 |
+
+Both ISO certificates cover "Provision of Electrical Engineering Service and Installation Works". KW Certification (59 Ubi Avenue 1 #06-04, Singapore 408938) confirms their validity on request.
+
+- **All three expire on 29 April 2029.** Before then, get the renewed certificates and update:
+  - the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`)
+  - the certificate-number line under the strip
+  - the "valid to" dates, the "since" years and the certificate numbers in the strip, the FAQ answer, the structured data and `llms.txt`
+
+  The KW logos print the cert numbers inside them, so replace the logos too if the numbers change.
 - Don't use the SAC mark on its own (the "QS-2017-31 / OSH-2019-20" file). It may only appear combined with KW Certification's mark, as in the ISO logo files.
 - Don't recolour or invert the logos. In dark mode they sit on white tiles instead.
-- The in-house LEW holds an **Electrical Technician's licence** (design up to 150 kVA, operation up to 500 kVA). Larger installations go to a partner Professional Engineer. Keep the strip, the "Licensed sign-off in-house" point, the EMA licensing service and the licence-renewal FAQ consistent with that, and never claim he signs off every installation.
+- BCA, EMA and SMRT don't give contractors a logo to display, and using their corporate logos would imply endorsement. Their columns use big type headings instead (**L1**, **LEW**, **1998**). Don't swap those for logos.
+- The site says certificate copies are available on request. Keep that only while someone at the office will send them.
+- The in-house LEW holds an **Electrical Technician's licence** (design up to 150 kVA, operation up to 500 kVA, per EMA's Electrical Installation Licence handbook). Larger installations go to a partner Professional Engineer. Keep the strip, the "Licensed sign-off in-house" point, the EMA licensing service and the licence-renewal FAQ consistent with that, and never claim he signs off every installation.
+
+**Credentials strip layout.** It sits at the bottom of the hero, with a light background in light mode. It has six columns, and each one is a `<div>` with a `<dt>` heading and a `<dd>` description:
+
+```html
+<!-- type heading -->
+<div><dt><span class="tb"><b>L1</b><small>BCA · ME05</small></span></dt><dd>Description</dd></div>
+<!-- logo heading -->
+<div><dt class="lg"><img src="img/iso9001.5cd591cb-400.png" alt="…" width="400" height="176" decoding="async" loading="lazy"></dt><dd>Description</dd></div>
+```
+
+Keep each description to about three lines at desktop width so the columns end level. The certificate numbers go in the `cred-nums` line below the grid, not in the descriptions.
 
 ### Phone, email, address, hours
 These appear in the contact section, the structured data, `llms.txt`, `og-image.png` and the Google Business Profile. Keep them all identical.
@@ -138,6 +167,7 @@ These appear in the contact section, the structured data, `llms.txt`, `og-image.
 - Export WebP (about 960px wide, quality around 70) and a JPG fallback (about 800px).
 - Use a **new file name** for every new or changed image (for example `name.<hash>-960.webp`). Images are cached for a year, so a reused name won't refresh.
 - Always include `width`, `height` and descriptive `alt` text.
+- **Exception: certification logos** are PNG only, because they need transparency. Export them at twice their display size (about 400px wide for the ISO marks, 240px for bizSAFE). Crop out excess white space, but never alter the artwork.
 
 ### Domain
 If the site moves to a different address, search and replace `https://www.sengsoon.com.sg/` in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt`.
