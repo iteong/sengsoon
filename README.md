@@ -56,7 +56,20 @@ Both domains show **Valid Configuration** under Vercel › Settings › Domains.
 After launch:
 - [x] **Google Search Console:** Domain property `sengsoon.com.sg`, verified by DNS. Sitemap `https://www.sengsoon.com.sg/sitemap.xml` submitted and homepage indexing requested.
 - [x] **Bing Webmaster Tools:** imported from Search Console, with the sitemap submitted separately (the import didn't bring it across) and homepage indexing requested.
-- [ ] **Google Business Profile:** keep the name, address, phone and hours identical to the site. The site links to the existing Maps listing, but the listing's website field still points to bca.gov.sg and it has no opening hours. Whoever owns the listing needs to fix both.
+- [x] **Google Business Profile:** verified and managed by the company. The site links to it (`hasMap` in the structured data, and the map link in the contact section). Checked on 11 Nov 2026, it matches the site:
+  - **Name:** Seng Soon Electrical Engineering Pte Ltd. **Category:** Electrician. **Service area:** Singapore.
+  - **Address:** Kampong Ubi Industrial Estate, 3006 Ubi Road 1, #02-358, Singapore 408700.
+  - **Phone:** 6742 3766. **Website:** https://www.sengsoon.com.sg/ (it used to point to bca.gov.sg). **Short name:** `sengsoonelectrical`.
+  - **Hours:** Mon–Fri 10:00–18:00, Sat and Sun closed (no hours were set before).
+  - **Description:** founded 1973 and incorporated 1988, BCA registered (ME05, L1), bizSAFE Star, ISO 9001 and ISO 45001, SMRT registered since 1998, the in-house LEW, the services (including main switchboard upgrades and EV chargers), and 200+ projects from condominiums and hospitals to MRT stations. If any of these change on the site, change the description too.
+  - **Opening date:** 24 July 1973. **Logo:** the SE mark.
+  - **Cover:** a 1920×1080 version of the 2026 letterhead, with everything stacked in a narrow centred column so the phone crop (about 4:5 from the middle) doesn't cut anything off. It lives next to the letterhead images, not in this repo. If you make a new one, keep the content within the middle ~860 px of the width.
+  - **Social profiles:** LinkedIn and Facebook, the same pages the site links to.
+
+  Remaining follow-up:
+  - **Reviews:** 3 reviews (5.0) as of 11 Nov 2026. Ask happy MCST and contractor clients for more.
+
+  Insights for Jun–Nov 2026: 974 profile views, 273 interactions, 34 website clicks and 13 calls. Several searches that showed the profile were for a different firm ("Huang Soon Electrical Engineering Works", 3026A Ubi Road), so some of the views come from people looking for that firm.
 
 ### Analytics
 - **Amplitude** (project `sengsoon`): analytics with autocapture and Session Replay, loaded from jsDelivr in the `<head>` of `index.html`. It only starts on `www.sengsoon.com.sg`, `sengsoon.com.sg`, `sengsoon.vercel.app` and `localhost`, so Vercel's screenshot bot on per-deployment URLs isn't counted. The API key in the page is public by design; never put a secret key there.
