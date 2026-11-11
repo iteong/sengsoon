@@ -126,6 +126,11 @@ If you edit a question or answer, also update the `FAQPage` structured data and 
 ### Credentials
 BCA registration, the LEW, bizSAFE, ISO certificates and SMRT appear in the credentials strip, the "Is Seng Soon a registered electrical contractor?" FAQ answer, the `hasCredential` structured data and `llms.txt`. Update all four. Only use official logo files supplied by each certifying body, and only while the certificate is valid.
 
+- **bizSAFE Star (E01694), ISO 9001 (KWQ-1547) and ISO 45001 (KWO-1548) all expire on 29 April 2029.** Before then, get the renewed certificates and replace the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`), the certificate-number line under the strip, and the "valid to" dates. The KW logos print the cert numbers inside them, so they must be replaced if the numbers change.
+- Don't use the SAC mark on its own (the "QS-2017-31 / OSH-2019-20" file). It may only appear combined with KW Certification's mark, as in the ISO logo files.
+- Don't recolour or invert the logos. In dark mode they sit on white tiles instead.
+- The in-house LEW holds an **Electrical Technician's licence** (design up to 150 kVA, operation up to 500 kVA). Larger installations go to a partner Professional Engineer. Keep the strip, the "Licensed sign-off in-house" point, the EMA licensing service and the licence-renewal FAQ consistent with that, and never claim he signs off every installation.
+
 ### Phone, email, address, hours
 These appear in the contact section, the structured data, `llms.txt`, `og-image.png` and the Google Business Profile. Keep them all identical.
 

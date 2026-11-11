@@ -5,19 +5,19 @@
 ## Key facts
 - Established 24 Jul 1973 (sole proprietorship, registered with ACRA as UEN 10001400C); incorporated 28 Dec 1988 as Seng Soon Electrical Engineering Pte Ltd (UEN 198804759R)
 - BCA registered contractor, workhead ME05 Electrical Engineering, grade L1
-- bizSAFE Star; ISO 9001:2015; ISO 45001:2018
+- bizSAFE Star (certificate E01694); ISO 9001:2015 (certificate KWQ-1547, held since 2014); ISO 45001:2018 (certificate KWO-1548, held since 2015). ISO certificates issued by KW Certification, an SAC-accredited certification body. All valid to April 2029.
 - SMRT Trains registered contractor since 1998; lightning protection maintenance on the North-South & East-West Lines, Circle Line and Bukit Panjang LRT
 - 200+ development projects since 1973; 300+ clients including small works and servicing
 - Founded in 1973 by Teong Hien Sing (also known as Sunny Teong), who still runs the company as Managing Director and Licensed Electrical Worker and oversees every job personally
 - Takes on everything from repairs, servicing and licence renewals to multi-million-dollar installations; largest single contract S$6 million
-- Every site led by its own supervisors, with more than a decade at the company (the longest-serving joined in 1992); in-house Licensed Electrical Worker sign-off; MCST servicing relationships of more than ten years
+- Every site led by its own supervisors, with more than a decade at the company (the longest-serving joined in 1992); in-house Licensed Electrical Worker sign-off (Electrical Technician's licence), with a partner Professional Engineer for larger installations; MCST servicing relationships of more than ten years
 
 ## Services
 - Consultancy & design: Needs assessment, load calculations, equipment selection and electrical drawings.
 - Supply & installation: Distribution boards, switchboards, lighting, power points, CCTV and EV chargers, for new builds and replacements.
 - Fault finding & repair: Inspection and testing to find the fault, then repair or replace what's needed.
 - Inspection & maintenance: Periodic inspections, preventive and corrective maintenance, earthing and lightning protection checks.
-- EMA licensing: We act as your Licensed Electrical Worker for Electrical Installation Licence applications and annual renewals.
+- EMA licensing: We act as your Licensed Electrical Worker for Electrical Installation Licence applications and annual renewals, for installations up to 500 kVA.
 - Testing & commissioning: Pre-energisation testing, LEW technical advice, and liaison with SP Group for shutdowns and turn-on.
 
 ## Who we work for
@@ -76,7 +76,7 @@
 
 ## Frequently asked questions
 **Can you renew our EMA electrical installation licence?**
-Yes. Our in-house Licensed Electrical Worker can act as the LEW for your installation, handle the application or annual renewal, and carry out the required inspection and testing. Non-domestic installations above 45 kVA need this licence, and renewals should be filed at least a month before expiry.
+Yes. For installations up to 500 kVA, our in-house Licensed Electrical Worker can act as the LEW, handle the application or annual renewal, and carry out the required inspection and testing. For larger installations, we partner with a Professional Engineer. Non-domestic installations above 45 kVA need this licence, and renewals should be filed at least a month before expiry.
 
 **How often must our electrical installation be inspected?**
 It depends on the premises. EMA requires condominiums and multi-tenanted buildings to be inspected at least once every six months, construction sites at least once a month, and most other licensed installations at least once a year. As your appointed LEW, we schedule and carry out these inspections for you.
@@ -91,7 +91,7 @@ Yes, for clients on a servicing contract, during office hours (Monday to Friday,
 Yes. Once you have bought your chargers, we install them, from cabling to connection, and our in-house Licensed Electrical Worker tests and certifies the installation. We do not supply the chargers ourselves.
 
 **Is Seng Soon a registered electrical contractor?**
-Yes. We are registered with the Building and Construction Authority under workhead ME05 (Electrical Engineering) at grade L1, certified bizSAFE Star, ISO 9001:2015 and ISO 45001:2018, and have been an SMRT registered contractor since 1998.
+Yes. We are registered with the Building and Construction Authority under workhead ME05 (Electrical Engineering) at grade L1, certified bizSAFE Star, ISO 9001:2015 (since 2014) and ISO 45001:2018 (since 2015), and have been an SMRT registered contractor since 1998. Our ISO certificates are issued by KW Certification, an SAC-accredited certification body.
 
 **Do you work directly with MCSTs?**
 Yes. We contract directly with management corporations for switchboard upgrades and other common-area works, and we have held servicing contracts with some MCSTs for more than ten years.
