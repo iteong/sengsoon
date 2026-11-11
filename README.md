@@ -134,6 +134,9 @@ BCA registration, the LEW, bizSAFE, ISO certificates and SMRT appear in the cred
 | bizSAFE Star | E01694 | Workplace Safety and Health Council | — | 30 Apr 2026 | 29 Apr 2029 |
 | ISO 9001:2015 (quality) | KWQ-1547 | KW Certification Pte Ltd, SAC accredited (QS-2017-31) | 30 Apr 2014 | 26 Apr 2026 | 29 Apr 2029 |
 | ISO 45001:2018 (health and safety) | KWO-1548 | KW Certification Pte Ltd, SAC accredited (OSH-2019-20) | 12 Jun 2015 | 26 Apr 2026 | 29 Apr 2029 |
+| EMA Electrical Technician's Licence (the in-house LEW, Teong Hien Sing) | 8/18147 | Energy Market Authority | — | Card issued 16 Aug 2016 | Lifetime of the licence holder |
+
+The LEW licence number is on EMA's public register, so it can be shown on the site. **Never publish his NRIC number**, which is printed on the licence card, and never add a scan of the card to this repo.
 
 Both ISO certificates cover "Provision of Electrical Engineering Service and Installation Works". KW Certification (59 Ubi Avenue 1 #06-04, Singapore 408938) confirms their validity on request.
 
