@@ -75,6 +75,11 @@
 - Newton Edge (Earlier project): Electrical works for the condominium. Client: —.
 - Costa Del Sol (Earlier project): Electrical works for the condominium. Client: —.
 
+## What clients say
+
+"Seng Soon has demonstrated its capabilities and commitment through its support of SMRT's lightning protection system maintenance works across the North-South and East-West Lines (NSEWL), Circle Line (CCL), and Bukit Panjang LRT (BPLRT). With a strong focus on technical competency, quality service delivery and safety standards, Seng Soon has played a supporting role in ensuring the continued effectiveness and reliability of lightning protection systems across these critical rail networks. Their professionalism, responsiveness and dedication to maintenance excellence make them a valued service partner in supporting the safety, resilience and operational integrity of railway infrastructure."
+— Jasson Juay, Manager, SMRT
+
 ## Frequently asked questions
 **Can you renew our EMA electrical installation licence?**
 Yes. For installations up to 500 kVA, our in-house Licensed Electrical Worker can act as the LEW, handle the application or annual renewal, and carry out the required inspection and testing. For larger installations, we partner with a Professional Engineer. Non-domestic installations above 45 kVA need this licence, and renewals should be filed at least a month before expiry.
