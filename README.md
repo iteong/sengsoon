@@ -140,14 +140,11 @@ The LEW licence number is on EMA's public register, so it can be shown on the si
 
 Both ISO certificates cover "Provision of Electrical Engineering Service and Installation Works". KW Certification (59 Ubi Avenue 1 #06-04, Singapore 408938) confirms their validity on request.
 
-- **All three expire on 29 April 2029.** Before then, get the renewed certificates and update:
-  - the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`)
+- **bizSAFE and both ISO certificates expire on 29 April 2029.** (The LEW licence doesn't expire.) Before then, get the renewed certificates and update:
+  - the logos (`public/img/bizsafe.*`, `iso9001.*`, `iso45001.*`). The KW logos print the cert numbers inside them, so replace them if the numbers change.
   - the certificate-number captions in the strip
-  - the "since" years and the certificate numbers in the strip, the FAQ answer, the structured data and `llms.txt`
-
-  The site deliberately doesn't show expiry dates or offer certificate copies; this table is the record of when they expire.
-
-  The KW logos print the cert numbers inside them, so replace the logos too if the numbers change.
+  - the certificate numbers and "since" years in the FAQ answer, the structured data and `llms.txt`
+- The site deliberately doesn't show expiry dates or offer certificate copies. This table is the record of when they expire.
 - Don't use the SAC mark on its own (the "QS-2017-31 / OSH-2019-20" file). It may only appear combined with KW Certification's mark, as in the ISO logo files.
 - Don't recolour or invert the logos. In dark mode they sit on white tiles instead.
 - BCA, EMA and SMRT don't give contractors a logo to display, and using their corporate logos would imply endorsement. Their columns use big type headings instead (**L1**, **LEW**, **1998**). Don't swap those for logos.
@@ -163,6 +160,16 @@ Both ISO certificates cover "Provision of Electrical Engineering Service and Ins
 ```
 
 Every heading has a small red caption: what the type heading stands for, the LEW licence number, or the certificate number under each logo. Keep each description to about three lines at desktop width so the columns end level.
+
+### Key figures
+The four big numbers sit in "Who we serve", between its intro and the client groups (`<div class="facts">`). Each number is a `<span class="num" data-count="…">`, and the count-up animation reads `data-count`.
+
+| Figure | How it updates | Also appears in |
+|---|---|---|
+| Years in business | Automatically: a script counts full years since 24 Jul 1973. The `53` in the HTML is only a fallback for crawlers, so bump it each July. | — |
+| 200+ development projects | By hand | the projects section intro ("more than 200 projects"), `llms.txt` key facts |
+| 300+ clients | By hand | `llms.txt` key facts |
+| 3 SMRT rail lines | By hand | the "Lightning protection across three SMRT lines" project card, the "Three SMRT rail lines" timeline entry in About |
 
 ### Phone, email, address, hours
 These appear in the contact section, the structured data, `llms.txt`, `og-image.png` and the Google Business Profile. Keep them all identical.
